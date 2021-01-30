@@ -1,0 +1,298 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Canter-Bold";
+    src: url("../media/fonts/Canter-Bold.eot"),
+    url("../media/fonts/Canter-Bold.woff"),
+    url("../media/fonts/Canter-Bold.woff2") format('truetype');
+}
+
+@font-face {
+    font-family: "Canter-Bold3D";
+    src: url("../media/fonts/Canter-Bold3D.eot"),
+    url("../media/fonts/Canter-Bold3D.woff"),
+    url("../media/fonts/Canter-Bold3D.woff2") format('truetype');
+}
+
+@font-face {
+    font-family: "Canter-BoldShadow";
+    src: url("../media/fonts/Canter-BoldShadow.eot"),
+    url("../media/fonts/Canter-BoldShadow.woff"),
+    url("../media/fonts/Canter-BoldShadow.woff2") format('truetype');
+}
+@font-face {
+    font-family: "Canter-Strips";
+    src: url("../media/fonts/Canter-BoldStrips.eot"),
+    url("../media/fonts/Canter-BoldStrips.woff"),
+    url("../media/fonts/Canter-BoldStrips.woff2") format('truetype');
+}
+@font-face {
+    font-family: "Canter-Light";
+    src: url("../media/fonts/Canter-Light.eot"),
+    url("../media/fonts/Canter-Light.woff"),
+    url("../media/fonts/Canter-Light.woff2") format('truetype');
+}
+@font-face {
+    font-family: "Canter-Outline";
+    src: url("../media/fonts/Canter-Outline.eot"),
+    url("../media/fonts/Canter-Outline.woff"),
+    url("../media/fonts/Canter-Outline.woff2") format('truetype');
+}
+
+body {
+    font-family : 'Open Sans', sans-serif;
+    padding : 0;
+    margin : 0;
+    background-color : #fff;
+    width : 100%;
+    height : 100%;
+}
+
+p {
+    font-family : 'Open Sans', sans-serif;
+    font-size : 1em;
+    font-weight : 400;
+}
+
+.container {
+    max-width: 960px;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    padding: 20px 25px;
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+}
+
+.container article > h2 {
+    margin-top: 3rem;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    background-color: #41AED7;
+}
+
+header .avatar {
+    margin: 0 auto;
+    max-width: 292px;
+}
+
+header .avatar .triangle {
+    visibility: hidden;
+    display: none;
+}
+
+header .avatar__img {
+    width: 100%;
+    height: auto;
+}
+
+.container .personal-data {
+    width: 100%;
+}
+
+header .container ul {
+    list-style-type: none;
+    color: #fff;
+    padding: 0;
+}
+
+header .container ul li {
+    margin: 2rem 0;
+}
+
+header .container ul li p.question {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+header .container ul li p {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+header .container ul li:first-child p:last-child {
+    font-family: 'Canter-Strips';
+    font-size: 5rem;    
+}
+
+header .triangle {
+    visibility: visible;
+    margin-bottom: -21px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 69px solid #fff;
+}
+
+/* Article */
+
+article {
+    float: left;
+    /* padding-right: 2rem; */
+    width: 100%;
+}
+
+article > h2 {
+    font-family: 'Canter-Bold';
+    font-size: 3.5rem;
+}
+
+/* Aside */
+
+aside {
+    /* padding-left: 2rem; */
+    float: right;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+aside > ul {
+    list-style-type: none;
+}
+
+aside ul li h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'Canter-Bold';
+    margin: 1rem 0;
+    margin-top: 2rem;
+}
+
+aside ul li p {
+    font-family : 'Open Sans', sans-serif;
+    margin-left: 1rem;
+}
+
+aside ul li:last-child ul{
+    height: 4rem;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+aside ul li:last-child ul li, aside ul li:last-child ul li a img{
+    width: 2rem;
+    height: auto;
+    margin: 1rem;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+aside ul li:last-child ul li a img:hover,
+aside ul li:last-child ul li a img:focus {
+    width: 2.5rem;
+}
+
+.li__img--deaf {
+    margin-left: 1rem;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+footer .container {
+    font-family : 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    border-top: 1px solid #333;    
+}
+
+footer .container p {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+@media (min-width: 720px) {
+    .container {
+        flex-direction: row;
+    }
+
+    article {
+        width: 65%;
+    }
+
+    aside {
+        width: 30%;
+    }
+
+    .container .personal-data {
+        width: 90%;
+        margin-left: 10%;
+    }
+
+    header .container {
+        flex-direction: column;
+    }
+
+    header .avatar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    header .avatar .triangle {        
+        visibility: visible;
+        display: inline;
+        margin-bottom: -4.5rem;
+    }
+
+    header .triangle {
+        visibility: hidden;
+    }
+
+    header .container .container__div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header .container ul {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    header .container ul li {
+        display: flex;
+        position: relative;
+    }
+
+    header .container ul li p {
+        display: inline-block;
+        text-align: initial;
+    }
+
+    header .container ul li p.question.question__p--left {
+        width: 250px;
+        margin-top: auto;
+    }
+    
+    header .container ul li .question__p--right {
+        float: left;
+        max-width: 100%;
+    } 
+
+    header .container ul li:last-child > .question__p--right span {
+        font-size: 0.8rem;
+        font-style: italic;
+    }
+}
