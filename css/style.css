@@ -88,6 +88,8 @@ header .avatar .triangle {
 }
 
 header .avatar__img {
+    margin-top: auto;
+    margin-bottom: auto;
     width: 100%;
     height: auto;
 }
